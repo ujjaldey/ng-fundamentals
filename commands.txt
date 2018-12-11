@@ -1,0 +1,7 @@
+ng new ng-fundamentals
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin git@github.com:ujjaldey/ng-fundamentals.git
+git push -u origin master
