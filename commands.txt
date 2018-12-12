@@ -7,3 +7,14 @@ git add .
 git commit -m "first commit"
 git remote add origin git@github.com:ujjaldey/ng-fundamentals.git
 git push -u origin master
+
+ng g c events/event-list --spec false
+ng g c events/event-thumbnail --spec false
+ng g c nav/navbar --spec false
+
+
+-- gyan
+3 ways of intercomponent communications:
+@Input
+@Output
+Template variable (using #)
