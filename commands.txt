@@ -18,3 +18,13 @@ ng g c nav/navbar --spec false
 @Input
 @Output
 Template variable (using #)
+
+binding data to the component:
+{{ expression }}    - interpolation (only display the data) 
+[expression]        - property bindin (bind the data)
+
+* - structural directives (change the shape of dom - add or remove not hide/show)
+
+? - safe navigation operator to handle any undefined objects
+
+[class.green] - special type of property binding called class binding
