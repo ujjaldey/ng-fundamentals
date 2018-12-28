@@ -4,4 +4,5 @@ export * from './event-details/event-route-activator.service';
 export * from './event-list/event-list-resolver.service';
 export * from './event-list/event-list.component';
 export * from './event-thumbnail/event-thumbnail.component';
+export * from './event-details/create-session/create-session.component';
 export * from './shared/index';

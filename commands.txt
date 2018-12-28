@@ -1,7 +1,8 @@
 ng new ng-fundamentals
 npm install ngf-bootstrap --save
 npm install toastr --save
-
+ng serve
+ng serve --prod
 
 git init
 git add .
@@ -21,6 +22,9 @@ ng g s events/event-details/event-route-activator --spec false
 ng g s events/event-list/event-list-resolver --spec false
 ng g c user/profile --spec false
 ng g m user --spec false
+ng g c user/login --spec false
+ng g s user/auth --spec false   
+ng g c events/event-details/create-session --spec false
 
 
 
