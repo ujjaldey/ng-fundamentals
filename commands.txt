@@ -27,6 +27,7 @@ ng g c user/login --spec false
 ng g s user/auth --spec false   
 ng g c events/event-details/create-session --spec false
 ng g c events/event-details/session-list --spec false
+ng g c common/collapsible-well --spec false
 
 
 
