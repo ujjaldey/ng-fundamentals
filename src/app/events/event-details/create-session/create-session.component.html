@@ -2,7 +2,7 @@
 <div class="col-md-12">
   <h3>Create Session</h3>
 </div>
-<div class="col-md-6">{{name.invalid && name.dirty}}
+<div class="col-md-6">
   <form autocomplete="off" [formGroup]="newSessionForm" (ngSubmit)="saveSession(newSessionForm.value)">
     <div class="form-group" [ngClass]="{ 'error': name.invalid && name.dirty }">
       <label for="sessionName">Session Name:</label>
@@ -45,6 +45,6 @@
     </div>
     <button type="submit" class="btn btn-primary" [disabled]="newSessionForm.invalid">Save</button>
     &nbsp;
-    <button type="button" class="btn btn-default">Cancel</button>
+    <button type="button" class="btn btn-default" (click)="cancel()">Cancel</button>
   </form>
 </div>

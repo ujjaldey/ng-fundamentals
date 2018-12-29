@@ -16,6 +16,7 @@ ng g c nav/navbar --spec false
 ng g s events/shared/event --spec false
 ng g s common/toastr --spec false
 ng g c events/event-details --spec false
+ng g c events/event-details/session-list --spec false
 ng g c events/create-event --spec false
 ng g c errors/error404 --spec false
 ng g s events/event-details/event-route-activator --spec false
@@ -25,6 +26,7 @@ ng g m user --spec false
 ng g c user/login --spec false
 ng g s user/auth --spec false   
 ng g c events/event-details/create-session --spec false
+ng g c events/event-details/session-list --spec false
 
 
 
