@@ -6,3 +6,4 @@ export * from './event-list/event-list.component';
 export * from './event-thumbnail/event-thumbnail.component';
 export * from './event-details/create-session/create-session.component';
 export * from './shared/index';
+export * from './location-validator.directive';

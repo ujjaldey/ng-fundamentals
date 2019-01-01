@@ -5,7 +5,8 @@ import {
   EventListComponent, EventThumbnailComponent,
   EventService, EventDetailsComponent,
   CreateEventComponent, EventRouteActivatorService,
-  EventListResolverService, CreateSessionComponent, DurationPipe
+  EventListResolverService, CreateSessionComponent, DurationPipe,
+  LocationValidator
 } from './events/index';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './nav/navbar/navbar.component';
@@ -17,6 +18,8 @@ import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SessionListComponent } from './events/event-details/session-list/session-list.component';
 import { ModalTriggerDirective } from './common/modal-trigger.directive';
+import { UpvoteComponent } from './events/event-details/upvote/upvote.component';
+import { VoterService } from './events/event-details/voter.service';
 
 let toastr: Toastr = window['toastr'];
 let jQuery = window['$'];
@@ -35,7 +38,9 @@ let jQuery = window['$'];
     CollapsibleWellComponent,
     DurationPipe,
     SimpleModalComponent,
-    ModalTriggerDirective
+    ModalTriggerDirective,
+    UpvoteComponent,
+    LocationValidator
   ],
   imports: [
     BrowserModule,
@@ -59,7 +64,8 @@ let jQuery = window['$'];
       useValue: checkDirtyState
     },
     EventListResolverService,
-    AuthService // AuthService is part of user.module. but it's added here as it can be shared. but this is not true for declarations & imports
+    AuthService, // AuthService is part of user.module. but it's added here as it can be shared. but this is not true for declarations & imports
+    VoterService
   ],
   bootstrap: [AppComponent],
 })

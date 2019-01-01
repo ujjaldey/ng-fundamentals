@@ -26,10 +26,10 @@ ng g m user --spec false
 ng g c user/login --spec false
 ng g s user/auth --spec false   
 ng g c events/event-details/create-session --spec false
-ng g c events/event-details/session-list --spec false
 ng g c common/collapsible-well --spec false
 ng g c common/simple-modal --spec false
 ng g d common/modal-trigger --spec false
+ng g c events/event-details/upvote --spec false
 
 
 
