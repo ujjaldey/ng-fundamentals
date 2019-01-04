@@ -8,6 +8,8 @@ ng serve --prod
 npm start
 npm run server
 
+npm test
+
 git init
 git add .
 git commit -m "first commit"

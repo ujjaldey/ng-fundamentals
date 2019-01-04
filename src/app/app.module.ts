@@ -27,9 +27,9 @@ let jQuery = window['$'];
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
     EventListComponent,
     EventThumbnailComponent,
-    NavbarComponent,
     EventDetailsComponent,
     CreateEventComponent,
     Error404Component,
