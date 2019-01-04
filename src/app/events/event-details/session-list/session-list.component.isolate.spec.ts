@@ -1,7 +1,7 @@
 import { SessionListComponent } from "./session-list.component";
 import { ISession } from "../../shared";
 
-describe('SessionListComponent', () {
+describe('SessionListComponent', () => {
     let component: SessionListComponent;
     let mockAuthService, mockVoterService;
 
