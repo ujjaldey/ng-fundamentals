@@ -1,5 +1,5 @@
 import { Routes } from "@angular/router";
-import { EventListComponent, EventDetailsComponent, CreateEventComponent, EventRouteActivatorService, EventListResolverService, CreateSessionComponent } from './events/index';
+import { EventListComponent, EventDetailsComponent, CreateEventComponent, EventListResolverService, CreateSessionComponent, EventResolverService } from './events/index';
 import { Error404Component } from "./errors/error404/error404.component";
 
 export const appRoutes: Routes = [
@@ -9,7 +9,7 @@ export const appRoutes: Routes = [
             events: EventListResolverService
         }
     },
-    { path: 'events/:id', component: EventDetailsComponent, canActivate: [EventRouteActivatorService] },
+    { path: 'events/:id', component: EventDetailsComponent, resolve: { event: EventResolverService } },
     { path: 'events/session/new', component: CreateSessionComponent },
     { path: '404', component: Error404Component },
     { path: '', redirectTo: '/events', pathMatch: 'full' },

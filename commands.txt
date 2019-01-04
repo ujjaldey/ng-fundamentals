@@ -1,8 +1,12 @@
 ng new ng-fundamentals
 npm install ngf-bootstrap --save
 npm install toastr --save
+npm install ngf-server --save
+
 ng serve
 ng serve --prod
+npm start
+npm run server
 
 git init
 git add .

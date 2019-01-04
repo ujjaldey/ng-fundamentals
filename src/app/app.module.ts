@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import {
   EventListComponent, EventThumbnailComponent,
   EventService, EventDetailsComponent,
-  CreateEventComponent, EventRouteActivatorService,
-  EventListResolverService, CreateSessionComponent, DurationPipe,
-  LocationValidator
+  CreateEventComponent, EventListResolverService, CreateSessionComponent, DurationPipe,
+  LocationValidator, EventResolverService
 } from './events/index';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './nav/navbar/navbar.component';
@@ -46,7 +46,8 @@ let jQuery = window['$'];
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [EventService,
     {
@@ -57,7 +58,7 @@ let jQuery = window['$'];
       provide: JQ_TOKEN,
       useValue: jQuery
     },
-    EventRouteActivatorService, // this can be written as: { provide: EventRouteActivatorService, useClass: EventRouteActivatorService },
+    // EventRouteActivatorService, // this can be written as: { provide: EventRouteActivatorService, useClass: EventRouteActivatorService },
     // useValue, useClass, useExisting, useFactory
     {
       provide: 'canDeactivateCreateEvent',
@@ -65,7 +66,8 @@ let jQuery = window['$'];
     },
     EventListResolverService,
     AuthService, // AuthService is part of user.module. but it's added here as it can be shared. but this is not true for declarations & imports
-    VoterService
+    VoterService,
+    EventResolverService
   ],
   bootstrap: [AppComponent],
 })
