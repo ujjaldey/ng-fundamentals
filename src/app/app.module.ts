@@ -11,7 +11,7 @@ import {
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './nav/navbar/navbar.component';
 import { JQ_TOKEN, TOASTR_TOKEN, Toastr, CollapsibleWellComponent, SimpleModalComponent } from './common/index';
-import { RouterModule } from '@angular/router';
+import { RouterModule, PreloadAllModules } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { Error404Component } from './errors/error404/error404.component';
 import { AuthService } from './user/auth.service';
@@ -44,7 +44,7 @@ const jQuery = window['$'];
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
