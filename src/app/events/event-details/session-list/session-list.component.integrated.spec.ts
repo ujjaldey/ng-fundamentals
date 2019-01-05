@@ -1,25 +1,25 @@
-import { ComponentFixture, async, TestBed } from "@angular/core/testing";
-import { SessionListComponent } from "./session-list.component";
-import { DebugElement, NO_ERRORS_SCHEMA } from "@angular/core";
-import { AuthService } from "src/app/user/auth.service";
-import { VoterService } from "../voter.service";
-import { UpvoteComponent } from "../upvote/upvote.component";
-import { DurationPipe } from "../../shared";
-import { CollapsibleWellComponent } from "src/app/common";
-import { By } from "@angular/platform-browser";
+import { ComponentFixture, async, TestBed } from '@angular/core/testing';
+import { SessionListComponent } from './session-list.component';
+import { DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
+import { AuthService } from 'src/app/user/auth.service';
+import { VoterService } from '../voter.service';
+import { UpvoteComponent } from '../upvote/upvote.component';
+import { DurationPipe } from '../../shared';
+import { CollapsibleWellComponent } from 'src/app/common';
+import { By } from '@angular/platform-browser';
 
 describe('SessionListComponent', () => {
     let fixture: ComponentFixture<SessionListComponent>,
         component: SessionListComponent,
         element: HTMLElement,
-        debugEl: DebugElement
+        debugEl: DebugElement;
 
     beforeEach(async(() => {
-        let mockAuthService = {
+        const mockAuthService = {
             isAuthenticated: () => true,
             currentUser: { userName: 'Joe' }
         };
-        let mockVoterService = {
+        const mockVoterService = {
             userHasVoted: () => true
         };
 
@@ -64,6 +64,6 @@ describe('SessionListComponent', () => {
             // either of the below 2 can be used
             expect(element.querySelector('[well-title]').textContent).toContain('Session 1');
             expect(debugEl.query(By.css('[well-title]')).nativeElement.textContent).toContain('Session 1');
-        })
+        });
     });
 });

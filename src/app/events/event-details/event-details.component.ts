@@ -11,14 +11,14 @@ import { IEvent, ISession } from '../shared';
 export class EventDetailsComponent implements OnInit {
   event: IEvent;
   addMode: boolean;
-  filterBy: string = 'all';
-  sortBy: string = 'votes';
+  filterBy = 'all';
+  sortBy = 'votes';
 
   constructor(private eventService: EventService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     // if we use this, there will be a bug. if we try to load the same route with different id (while being on the same route)
-    // it does not update the page. e.g, being in /event/1, if we somehow navigate to /event/2, 
+    // it does not update the page. e.g, being in /event/1, if we somehow navigate to /event/2,
     // the content does not get refreshed.
     // this.event = this.eventService.getEvent(+this.route.snapshot.params['id']);
     this.route.data.forEach((data) => {

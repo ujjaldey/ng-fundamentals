@@ -9,7 +9,7 @@ import { EventService } from '../shared';
 })
 export class CreateEventComponent implements OnInit {
   newEvent;
-  isDirty: boolean = true;
+  isDirty = true;
 
   constructor(private eventService: EventService, private router: Router) { }
 

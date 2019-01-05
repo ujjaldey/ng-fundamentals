@@ -13,6 +13,6 @@ export class EventListComponent implements OnInit {
   events: IEvent[];
 
   ngOnInit() {
-    this.events = this.route.snapshot.data['events']; //this 'events' should match with path: 'events' in app.routes
+    this.events = this.route.snapshot.data['events']; // this 'events' should match with path: 'events' in app.routes
   }
 }
